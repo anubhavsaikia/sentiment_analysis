@@ -18,7 +18,7 @@ print(np.shape(y_train))
 ## Training data prepared
 word_embeddings_dim = 50
 
-input_layer  = keras.Input(shape=(np.shape(x_train)[1],), name="InputLayer")
+input_layer  = keras.Input(shape=(None,), name="InputLayer")
 embedding_layer_init = layers.Embedding(vocab_size+1,word_embeddings_dim)
 embedding_layer = embedding_layer_init(input_layer)
 
